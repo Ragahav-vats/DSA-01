@@ -2,7 +2,7 @@ class Node {
     int val;
     Node next; // default null
 
-    Node(int val) {
+    Node(int val) { // constructor
         this.val = val;
     }
 }
@@ -27,6 +27,16 @@ public class DisplayList {
         c.next = d;
         d.next = e;
 
-        display(a);
+        // display(a);
+
+        System.out.println(get(a, 2));
+
+    }
+
+    public static int get(Node head, int idx) {
+        for(int i = 1; i <= idx; i++) {
+            head = head.next;
+        }
+        return head.val;
     }
 }
